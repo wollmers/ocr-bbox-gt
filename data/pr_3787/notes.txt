@@ -1,0 +1,27 @@
+notes
+
+$ tesseract pr_3787.png pr_3787.oem0.psm6.lat.png -l t5data/lat --oem 0 --psm 6 
+	--tessdata-dir  /usr/local/share/tessdata makebox hocr txt pdf
+
+$charboxes: 1706
+
+width frequency per character
+[...]
+r 15: 88,  16: 3,  17: 2, 
+s 15: 156, 
+t 13: 107,  15: 10,  14: 7,  12: 3,  16: 3, 
+u 24: 138,  25: 5, 
+v 24: 20,  25: 1,
+
+width errors
+    exact: 1653 (0.9689)
+    in   : 50   (0.0293) # within +/-2
+    out  : 3    (0.0018) # 3 't' with width 16
+    
+$ tesseract pr_3787.png pr_3787.psm6.png -l deu  --psm 6 
+	--tessdata-dir  /usr/local/share/tessdata makebox hocr txt pdf
+
+width errors
+    exact: 1304 (0.7644)
+    in   : 89   (0.0522)
+    out  : 314  (0.1841)
