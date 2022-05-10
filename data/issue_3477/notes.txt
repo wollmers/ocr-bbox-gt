@@ -1,0 +1,33 @@
+https://github.com/tesseract-ocr/tesseract/issues/3477#issuecomment-1120415922
+
+Below clear test image (Czech language, process with -l ces).
+
+$ tesseract 3477.jpg 3477.oem0.psm6.ces -l t5data/ces --oem 0 --psm 6 
+	--tessdata-dir  /usr/local/share/tessdata makebox hocr txt pdf
+	
+$ perl ../../scripts/draw_boxes.pl
+
+@$charboxes: 373
+$page->{bottom}: 0
+$page->{bbox}->{bottom}: 416
+width errors
+    exact: 24
+    in   : 294
+    out  : 55
+
+
+
+
+$ tesseract 3477.jpg 3477.psm6 -l ces  --psm 6 
+	--tessdata-dir  /usr/local/share/tessdata makebox hocr txt pdf
+	
+$ perl ../../scripts/draw_boxes.pl
+
+@$charboxes: 370
+$page->{bottom}: 0
+$page->{bbox}->{bottom}: 416
+width errors
+    exact: 135
+    in   : 144
+    out  : 91
+    	

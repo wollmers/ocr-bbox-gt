@@ -43,7 +43,7 @@ my $image_quad_dim = 16;
 my $page = {
 	#'image_file' => '../isisvonoken1826oken_0007.tessinput.tif',
 	#'image_file' => '../isisvonoken1826oken_0009.tessinput.tif',
-	'image_file' => 'pr_3787.png',
+	'image_file' => '3477.jpg',
 	'image'		 => '',
 	'columns'    => {},
 	'rows'       => {},
@@ -58,7 +58,7 @@ my $page = {
 };
 
 #my $basename   = 'pr_3787.psm6.png';
-my $basename   = 'pr_3787.oem0.psm6.lat.png';
+my $basename   = '3477.psm6';
 #$basename =~ s/\.png$//i;
 my $boxfile    = $basename . '.box';
 my $boxoutfile = $basename . '.box.png';
